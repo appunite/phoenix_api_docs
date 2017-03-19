@@ -138,12 +138,14 @@ The configuration options can be setup in `config.exs`:
 ```elixir
 config :phoenix_api_docs,
   docs_path: "priv/static/docs",
-  theme: "triple"
+  theme: "triple",
+  router: YourApp.Web.Router
 ```
 
 Config options:
 * `docs_path`: Specify the path where the documentation will be generated. If you want to serve the documentation directly from the `phoenix` you can specify `priv/static/docs`.
 * `theme`: HTML theme is generated using the [Aglio renderer](https://github.com/danielgtaylor/aglio).
+* `router`: Router of your application, in Phoenix 1.3 it will be YourAppName.Web.Router
 
 
 ## Common problems
