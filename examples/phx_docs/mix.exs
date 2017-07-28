@@ -31,6 +31,7 @@ defmodule PhxDocs.Mixfile do
      {:phoenix_pubsub, "~> 1.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:ex_machina, "~> 2.0"}]
+     {:ex_machina, "~> 2.0"},
+     {:phoenix_api_docs, path: "../../"}]
   end
 end
