@@ -7,7 +7,7 @@ defmodule PhxDocs.Web.UserControllerTest do
 
   describe "index" do
     test "lists all users", %{conn: conn} do
-      conn = get(conn, user_path(conn, :index)) |> PhoenixApiDocs.ConnLogger.save()
+      conn = get(conn, user_path(conn, :index)) |> save_to_docs()
       assert is_list(json_response(conn, 200)["data"])
     end
   end

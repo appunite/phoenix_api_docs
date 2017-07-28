@@ -24,13 +24,18 @@ defmodule PhxDocs.Web.ConnCase do
       # Import factory for generating dummy data
       import PhxDocs.Factory
 
+      import PhxDocs.Web.ConnCase
+
       # The default endpoint for testing
       @endpoint PhxDocs.Web.Endpoint
     end
   end
 
-
   setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
+  end
+
+  def save_to_docs(conn) do
+    PhoenixApiDocs.ConnLogger.save(conn)
   end
 end
