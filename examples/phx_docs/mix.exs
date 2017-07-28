@@ -19,6 +19,15 @@ defmodule PhxDocs.Mixfile do
      extra_applications: [:logger, :runtime_tools]]
   end
 
+  # Specifies API Docs basic information
+  def api_docs_info do
+    [
+      host: "https://api.acme.com",
+      title: "PhxDocs API",
+      description: "A demo API for the PhoenixApiDocs project."
+    ]
+  end
+
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_),     do: ["lib"]

@@ -1,6 +1,9 @@
 defmodule PhxDocs.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :phx_docs
 
+  # Serve at "/api/docs" the API documentation
+  plug Plug.Static, at: "/api/docs/", from: {:phx_docs, "priv/docs"}
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
