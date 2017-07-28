@@ -7,5 +7,7 @@ defmodule PhxDocs.Web.Router do
 
   scope "/api", PhxDocs.Web do
     pipe_through :api
+
+    resources "/users", UserController, only: [:index]
   end
 end

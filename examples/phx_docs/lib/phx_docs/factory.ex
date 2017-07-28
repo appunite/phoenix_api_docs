@@ -3,6 +3,7 @@ defmodule PhxDocs.Factory do
 
   def user_factory do
     %{
+      id: sequence("100"),
       name: sequence("John Doe"),
       username: sequence("john.doe"),
       email: sequence(:email, &"john.doe-#{&1}@example.org")
