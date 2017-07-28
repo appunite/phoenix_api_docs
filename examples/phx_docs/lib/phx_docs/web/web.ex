@@ -22,6 +22,9 @@ defmodule PhxDocs.Web do
       import Plug.Conn
       import PhxDocs.Web.Router.Helpers
       import PhxDocs.Web.Gettext
+
+      # Import factory for generating dummy data
+      import PhxDocs.Factory
     end
   end
 

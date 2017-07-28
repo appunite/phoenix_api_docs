@@ -21,6 +21,9 @@ defmodule PhxDocs.Web.ConnCase do
       use Phoenix.ConnTest
       import PhxDocs.Web.Router.Helpers
 
+      # Import factory for generating dummy data
+      import PhxDocs.Factory
+
       # The default endpoint for testing
       @endpoint PhxDocs.Web.Endpoint
     end
@@ -30,5 +33,4 @@ defmodule PhxDocs.Web.ConnCase do
   setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
-
 end
