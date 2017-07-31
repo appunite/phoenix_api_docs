@@ -6,9 +6,9 @@ defmodule PhoenixApiDocs.Generator do
     router_module = Application.get_env(:phoenix_api_docs, :router, Module.concat([app_module, :Router]))
 
     %{
-      host: Keyword.get(api_docs_info, :host, "http://localhost"),
-      title: Keyword.get(api_docs_info, :title, "API Documentation"),
-      description: Keyword.get(api_docs_info, :description, "Enter API description in mix.exs - api_docs_info"),
+      host: Keyword.get(api_docs_info(), :host, "http://localhost"),
+      title: Keyword.get(api_docs_info(), :title, "API Documentation"),
+      description: Keyword.get(api_docs_info(), :description, "Enter API description in mix.exs - api_docs_info"),
       routes: routes_docs(router_module, test_conns)
     }
   end
